@@ -2,15 +2,15 @@
 
 const map = function (){
 
-    let width = 1000, height = 1000
+    let width = 1000, height = 475
     
-    let svg = d3.select("body").append("svg")
+    let svg = d3.select(".map").append("svg")
         .attr("width", width)
         .attr("height", height)
     
     let usaProjection = d3.geoAlbersUsa()
       .scale(1000)
-      .translate([400, 250])
+      .translate([400, 225])
     
     let pathGenerator = null
     

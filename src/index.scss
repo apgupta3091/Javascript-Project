@@ -10,5 +10,26 @@ h1 {
 }
 
 .state:hover{
-    fill: gray;
+    fill: rgb(13, 241, 89);
+}
+.legend-div {
+    display: inline-block;
+    margin-left: 40px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.legend-div p{
+    display: inline-block;
+    display: flex;
+    margin-top: 55px;
+    font-size: 20px;
+}
+
+
+
+.legend-container {
+    fill: white;
+    opacity: .9;
 }
