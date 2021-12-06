@@ -33,8 +33,8 @@ const legend = () =>{
         y: legendContainerAttributes.y + 55
     };
 
-    let legendData = [0, 75, 150, 225, 300];
-    let legendColors = ['#B0E0E6', '#87CEFA', '#00BFFF', '#6495ED', '#0000FF']
+    let legendData = ['0', '>50', '>150', '>200'];
+    let legendColors = ['#87CEFA', '#00BFFF', '#6495ED', '#0000FF']
 
     let legend = svg.selectAll('g.legend')
         .data(legendData)
@@ -53,7 +53,7 @@ const legend = () =>{
         })
         .style('opacity', 1);
 
-        let legendLabels = [0, 75, 150, 225, 300];
+        let legendLabels = ['0', '>50', '>150', '>200'];
 
 
         legend.append('text')
