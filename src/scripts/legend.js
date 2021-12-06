@@ -8,11 +8,6 @@ const legend = () =>{
         .attr("width", width)
         .attr("height", height)
 
-    let scaleDensity = d3.scaleQuantize()
-        .domain([0, 100])
-        .range([0, 1000, 2000, 3000, 4000, 5000]);
-
-   
 
     let legendContainerAttributes = {
         width: 350, 
@@ -21,7 +16,6 @@ const legend = () =>{
         y: height * 0.02,
         roundX: 10,
         roundY: 10
-        
     }
 
     let legendContainer = svg.append('rect')
@@ -39,8 +33,8 @@ const legend = () =>{
         y: legendContainerAttributes.y + 55
     };
 
-    let legendData = [0, 1000, 2000, 3000, 4000, 5000];
-    let legendColors = ['#B0E0E6', '#87CEFA', '#00BFFF', '#6495ED', '#0000FF', '#00008B']
+    let legendData = [0, 75, 150, 225, 300];
+    let legendColors = ['#B0E0E6', '#87CEFA', '#00BFFF', '#6495ED', '#0000FF']
 
     let legend = svg.selectAll('g.legend')
         .data(legendData)
@@ -59,7 +53,8 @@ const legend = () =>{
         })
         .style('opacity', 1);
 
-        let legendLabels = [0, 2500, 5000, 7500, 10000, 12500]
+        let legendLabels = [0, 75, 150, 225, 300];
+
 
         legend.append('text')
             .attr('x', function(d, i){
