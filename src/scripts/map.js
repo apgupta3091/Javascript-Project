@@ -29,10 +29,38 @@ const map = function (){
         .append("path")
         .attr("d", pathGenerator) 
         .attr("stroke", "black") 
-        .attr("fill", "white") 
+        .attr("fill", "lightblue") 
         .attr("class", "state")
-        .on('mouseover', function(d) {console.log(d.id)})
+        .on('mouseover' ,onMouseOver)
+        .on('mouseout' ,onMouseOut)
         });
+        
+
+  function onMouseOver(d){
+    d3.select('#tooltip')
+      .select('#value')
+      .text(`${d.properties.name}: 20,000 `)
+      d3.select('#tooltip')
+        .classed('hidden', false)
+
+    d3.select(this)
+      .transition()
+      .duration(500)
+      
+  }
+
+  function onMouseOut(d){
+    d3.select(this)
+      .transition()
+      .duration(500)
+    d3.select('#tooltip')
+      .classed('hidden', true)
+  }
+
+  document.onmousemove = (event) => {
+        document.getElementById("tooltip").style.left = event.pageX + 10 + "px";
+        document.getElementById("tooltip").style.top = event.pageY - 35 + "px";
+  }
 
     
 }
