@@ -59,7 +59,7 @@ const legend = () =>{
         })
         .style('opacity', 1);
 
-        let legendLabels = [0, 1000, 2000, 3000, 4000, 5000]
+        let legendLabels = [0, 2500, 5000, 7500, 10000, 12500]
 
         legend.append('text')
             .attr('x', function(d, i){

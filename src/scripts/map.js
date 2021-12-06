@@ -31,8 +31,10 @@ const map = function (){
         .attr("stroke", "black") 
         .attr("fill", "white") 
         .attr("class", "state")
-        
+        .on('mouseover', function(d) {console.log(d.id)})
         });
+
+    
 }
 
 export default map;
