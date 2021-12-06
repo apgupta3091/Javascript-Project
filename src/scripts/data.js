@@ -1,5 +1,5 @@
 
-async function getData(url = 'https://data.usajobs.gov/api/search?Keyword=Software&LocationName=California') {
+async function getData(url = 'https://data.usajobs.gov/api/search?Keyword=Software&LocationName=New%20York') {
     
     const response = await fetch(url, {
         headers: {

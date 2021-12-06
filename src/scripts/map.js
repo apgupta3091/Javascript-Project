@@ -1,5 +1,6 @@
 import getData from './data';
 
+
 const map = function (){
 
     let width = 1000, height = 475
@@ -20,17 +21,18 @@ const map = function (){
     pathGenerator = d3.geoPath().projection(usaProjection)
     geoJsonUrl = "https://gist.githubusercontent.com/spiker830/e0d1b7950ced31369c903bed0cead7b1/raw/702c72e0ca5a1be95f84a50a58cfa6d4d6400f3f/us_features.json"
 
-    const data = getData()
-    .then(data => {
-        // console.log(data.SearchResult.SearchResultCountAll);
+    
+    const data = getData() 
+      .then(data => {
+        console.log(data.SearchResult.SearchResultCountAll);
         return data.SearchResult.SearchResultCountAll;
-        
-    })
-    .catch(error => {
-        console.error('There has been a problem with your fetch operation: ', error);
-    });
+      })
+      .catch(error => {
+        console.log('There is a problem woth your fetch operation', error);
+      });
 
-    console.log(data);
+      console.log(data);
+  
     
     
     d3.json(geoJsonUrl)
@@ -52,7 +54,7 @@ const map = function (){
     
     d3.select('#tooltip')
       .select('#value')
-      .text(`${d.properties.name}: ${data.PromiseResult}`)
+      .text(`${d.properties.name}: ${data}`)
       d3.select('#tooltip')
         .classed('hidden', false)
 
