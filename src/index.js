@@ -4,10 +4,18 @@ import stateData from './scripts/stateData';
 import states from './data/states';
 
 document.addEventListener("DOMContentLoaded", () => {
-    let obj = stateData('',states);
-    // for(let i = 0; i < states.length; i++){
-    //     obj[states[i]] = obj[states[i]]
-    // }
+    const statesData = stateData('', states)
+    .then(data => {
+        for(let i = 0; i < states.length; i++){
+            data[states[i]] = data[states[i]].SearchResult.SearchResultCountAll;
+        }
+        console.log(data);
+      })
+      .catch(error => {
+        console.log('There is a problem woth your fetch operation', error);
+      });
+
+    console.log(statesData);
     renderMap();
     legend();
 })

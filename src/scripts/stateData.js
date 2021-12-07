@@ -1,4 +1,3 @@
-import states from '../data/states';
 
 async function stateData(url = '', state) {
     let obj = {};
@@ -27,14 +26,7 @@ async function stateData(url = '', state) {
 }
 
 
-const statesData = stateData('', states)
-    .then(data => {
-        console.log(data.Alabama.SearchResult.SearchResultCountAll);
-        
-      })
-      .catch(error => {
-        console.log('There is a problem woth your fetch operation', error);
-      });
+
 
 
 
