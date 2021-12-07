@@ -35,10 +35,13 @@ const map = function (){
         .on('mouseover' ,onMouseOver)
         .on('mouseout' ,onMouseOut)
         });
+
+  function fill(d){
+    
+  }
         
 
   function onMouseOver(d){
-    
     const data = getData('',d.properties.name) 
       .then(data => {
         d3.select('#tooltip')
@@ -58,7 +61,6 @@ const map = function (){
     d3.select(this)
       .transition()
       .duration(500)
-      
   }
 
   function onMouseOut(d){
