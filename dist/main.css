@@ -80,3 +80,7 @@ h1 {
 .light {
   fill: #154baf9d;
 }
+
+.hidden {
+  display: none;
+}

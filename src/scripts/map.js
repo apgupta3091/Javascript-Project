@@ -1,7 +1,6 @@
-import getData from './data';
 
 
-const renderMap = function (data){
+const renderMap = (data) => {
 
     let width = 1000, height = 475
     
@@ -41,9 +40,10 @@ const renderMap = function (data){
 
 
     
-  function fill(d){
+  const fill = () => {
     let elements = document.querySelectorAll(".state")
     let elementsArr = Array.prototype.slice.call(elements);
+    
     for(let i = 0; i < elementsArr.length; i++){
       if (data[elementsArr[i].__data__.properties.name] >= 225){
         elementsArr[i].classList.remove("light", "mid-dark", "mid-light")
@@ -59,8 +59,7 @@ const renderMap = function (data){
   }
         
 
-  function onMouseOver(d){
-    
+  const onMouseOver = (d) => {
     d3.select('#tooltip')
       .select('#value')
       .text(`${d.properties.name}: ${data[d.properties.name]}`)
@@ -72,7 +71,7 @@ const renderMap = function (data){
       .duration(500)
   }
 
-  function onMouseOut(d){
+  const onMouseOut = () => {
     d3.select(this)
       .transition()
       .duration(500)
