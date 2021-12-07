@@ -10,13 +10,14 @@ document.addEventListener("DOMContentLoaded", () => {
             data[states[i]] = data[states[i]].SearchResult.SearchResultCountAll;
         }
         console.log(data);
+        renderMap(data);
+        legend();
       })
       .catch(error => {
         console.log('There is a problem woth your fetch operation', error);
       });
-
     
-    renderMap();
-    legend();
+    
+    
 })
 

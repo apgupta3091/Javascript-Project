@@ -1,7 +1,7 @@
 import getData from './data';
 
 
-const renderMap = function (){
+const renderMap = function (data){
 
     let width = 1000, height = 475
     
@@ -30,30 +30,40 @@ const renderMap = function (){
         .append("path")
         .attr("d", pathGenerator) 
         .attr("stroke", "black") 
-        .attr("fill", "lightblue") 
-        .attr("class", "state")
-        .on('mouseover' ,onMouseOver)
-        .on('mouseout' ,onMouseOut)
+        .attr("class", "state dark mid-dark mid-light light")
+        .on('mouseover', onMouseOver)
+        .on('mouseout', onMouseOut)
+        .attr("fill", fill) 
+        
         });
+      
+   
 
+
+    
   function fill(d){
+    let elements = document.querySelectorAll(".state")
+    let elementsArr = Array.prototype.slice.call(elements);
+    for(let i = 0; i < elementsArr.length; i++){
+      if (data[elementsArr[i].__data__.properties.name] >= 225){
+        elementsArr[i].classList.remove("light", "mid-dark", "mid-light")
+      } else if (data[elementsArr[i].__data__.properties.name] >= 150 && data[elementsArr[i].__data__.properties.name] < 225){
+        elementsArr[i].classList.remove("light", "dark", "mid-light")
+      } else if (data[elementsArr[i].__data__.properties.name] >= 75 && data[elementsArr[i].__data__.properties.name] < 150){
+        elementsArr[i].classList.remove("light", "dark", "mid-dark")
+      } else {
+        elementsArr[i].classList.remove("mid-light", "dark", "mid-dark")
+      }
+    }
     
   }
         
 
   function onMouseOver(d){
-    // const data = getData('',d.properties.name) 
-    //   .then(data => {
-        
-    //   })
-    //   .catch(error => {
-    //     console.log('There is a problem woth your fetch operation', error);
-    //   });
-    
     
     d3.select('#tooltip')
       .select('#value')
-      .text(`${d.properties.name}: 100`)
+      .text(`${d.properties.name}: ${data[d.properties.name]}`)
       d3.select('#tooltip')
         .classed('hidden', false)
 

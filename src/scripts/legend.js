@@ -28,13 +28,13 @@ const legend = () =>{
         .attr('class', 'legend-container');
 
     let legendBoxAttributes = {
-        width: 50, 
+        width: 75, 
         height: 25,
         y: legendContainerAttributes.y + 55
     };
 
-    let legendData = ['0', '>50', '>150', '>200'];
-    let legendColors = ['#87CEFA', '#00BFFF', '#6495ED', '#0000FF']
+    let legendData = ['0 - 75', '>50', '>150', '>200'];
+    let legendColors = ['#154baf9d', '#0933f18a', '#0849fcc0', '#0817f0']
 
     let legend = svg.selectAll('g.legend')
         .data(legendData)
@@ -53,7 +53,7 @@ const legend = () =>{
         })
         .style('opacity', 1);
 
-        let legendLabels = ['0', '>50', '>150', '>200'];
+        let legendLabels = ['0', '75', '150', '225+'];
 
 
         legend.append('text')
@@ -61,7 +61,7 @@ const legend = () =>{
                 return legendContainerAttributes.x + legendBoxAttributes.width * i + 30;
             })
             .attr('y', legendContainerAttributes.y + 50)
-            .style('font-size', 16)
+            .style('font-size', 18)
             .text((function(d, i){
                 if (i === 5){
                     return legendLabels[i] + '+';

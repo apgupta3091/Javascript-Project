@@ -57,10 +57,26 @@ h1 {
   display: inline-block;
   display: flex;
   margin-top: 55px;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .legend-container {
   fill: white;
   opacity: 0.9;
+}
+
+.dark {
+  fill: #0817f0;
+}
+
+.mid-dark {
+  fill: #0849fcc0;
+}
+
+.mid-light {
+  fill: #0933f18a;
+}
+
+.light {
+  fill: #154baf9d;
 }
