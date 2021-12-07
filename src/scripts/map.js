@@ -1,7 +1,7 @@
 import getData from './data';
 
 
-const map = function (){
+const renderMap = function (){
 
     let width = 1000, height = 475
     
@@ -42,19 +42,18 @@ const map = function (){
         
 
   function onMouseOver(d){
-    const data = getData('',d.properties.name) 
-      .then(data => {
-        d3.select('#tooltip')
-          .select('#value')
-          .text(`${d.properties.name}: ${data.SearchResult.SearchResultCountAll}`)
-      })
-      .catch(error => {
-        console.log('There is a problem woth your fetch operation', error);
-      });
+    // const data = getData('',d.properties.name) 
+    //   .then(data => {
+        
+    //   })
+    //   .catch(error => {
+    //     console.log('There is a problem woth your fetch operation', error);
+    //   });
+    
     
     d3.select('#tooltip')
       .select('#value')
-      .text(`${d.properties.name}: ${data}`)
+      .text(`${d.properties.name}: 100`)
       d3.select('#tooltip')
         .classed('hidden', false)
 
@@ -79,4 +78,4 @@ const map = function (){
     
 }
 
-export default map;
+export default renderMap;

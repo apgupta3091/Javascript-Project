@@ -19,7 +19,8 @@ async function getData(url = '', state="New%20York") {
     }
     const data = await response.json()
    
-    return data
+    return obj;
+
 }
 
 
