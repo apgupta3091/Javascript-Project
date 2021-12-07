@@ -1,5 +1,5 @@
 
-async function stateData(url = '', state) {
+async function getStateData(url = '', state) {
     let obj = {};
     const startUrl = "https://data.usajobs.gov/api/search?Keyword=Software&LocationName="
     if (!url){
@@ -25,9 +25,4 @@ async function stateData(url = '', state) {
     return obj;
 }
 
-
-
-
-
-
-export default stateData;
+export default getStateData;
