@@ -4,7 +4,6 @@ import getStateData from './scripts/stateData';
 import states from './data/states';
 import setData from './data/data';
 import clearMap from './scripts/clearMap';
-import clearLegend from './scripts/clearLegend';
 
 document.addEventListener("DOMContentLoaded", () => {
     renderMap(setData);
@@ -15,10 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
             data[states[i]] = data[states[i]].SearchResult.SearchResultCountAll;
         }
         console.log(data);
-        // clearMap();
-        // clearLegend();
+        clearMap();
         renderMap(data);
-        legend();
       })
       .catch(error => {
         console.log('There is a problem with your fetch operation', error);

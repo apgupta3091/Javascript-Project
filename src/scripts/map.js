@@ -7,6 +7,7 @@ const renderMap = (data) => {
     let svg = d3.select(".map").append("svg")
         .attr("width", width)
         .attr("height", height)
+        .attr('class', 'map1')
     
     let usaProjection = d3.geoAlbersUsa()
       .scale(1000)
