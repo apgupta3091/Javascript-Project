@@ -162,3 +162,22 @@ h1 {
     background-color: white;
 }
 
+.bar {
+    fill: rgb(66, 131, 252);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+#graphic h3 {
+    margin-left: 60px;
+    margin-bottom: 0;
+}
+
+#graphic {
+    border: 1px solid black;
+    margin-left: 100px;
+    margin-top: 275px;
+}

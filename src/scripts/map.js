@@ -1,7 +1,7 @@
 
 const renderMap = (data) => {
 
-    let width = 1000, height = 475
+    let width = 750, height = 475
     
     let svg = d3.select(".map").append("svg")
         .attr("width", width)

@@ -4,6 +4,11 @@ import getStateData from './scripts/stateData';
 import states from './data/states';
 import setData from './data/data';
 import clearMap from './scripts/clearMap';
+import northEast from './data/northEast';
+import west from './data/west';
+import southEast from './data/southEast';
+import midWest from './data/midWest';
+import barChart from './scripts/chart';
 
 document.addEventListener("DOMContentLoaded", () => {
     renderMap(setData);
@@ -46,6 +51,8 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch(error => {
         console.log('There is a problem with your fetch operation', error);
       });
+
+    barChart(west);
     
     
     
