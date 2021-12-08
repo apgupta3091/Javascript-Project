@@ -1,5 +1,4 @@
 
-
 const renderMap = (data) => {
 
     let width = 1000, height = 475
