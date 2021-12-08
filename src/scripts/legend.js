@@ -28,7 +28,7 @@ const legend = () =>{
         .attr('class', 'legend-container');
 
     let legendBoxAttributes = {
-        width: 75, 
+        width: 60, 
         height: 25,
         y: legendContainerAttributes.y + 55
     };
@@ -58,7 +58,7 @@ const legend = () =>{
 
         legend.append('text')
             .attr('x', function(d, i){
-                return legendContainerAttributes.x + legendBoxAttributes.width * i + 30;
+                return legendContainerAttributes.x + legendBoxAttributes.width * i + 40;
             })
             .attr('y', legendContainerAttributes.y + 50)
             .style('font-size', 18)

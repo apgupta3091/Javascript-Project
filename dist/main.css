@@ -57,12 +57,12 @@ h1 {
   display: inline-block;
   display: flex;
   margin-top: 55px;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .legend-container {
   fill: white;
-  opacity: 0.9;
+  opacity: 0;
 }
 
 .dark {
@@ -83,4 +83,67 @@ h1 {
 
 .hidden {
   display: none;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 1000ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: white;
+  width: 500px;
+  max-width: 80%;
+}
+
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.modal-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-header #close-btn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-body {
+  padding: 10px 15px;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 1;
+  transition: 1000ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+.modal.hide {
+  transition: 50ms ease-in-out;
+  opacity: 0;
+}
+
+#overlay.hide {
+  opacity: 1;
+  pointer-events: all;
+  background-color: white;
 }
