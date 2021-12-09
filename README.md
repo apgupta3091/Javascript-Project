@@ -2,7 +2,7 @@
 
 ## BACKGROUND:
 
-[U.S. Software Jobs]https://apgupta3091.github.io/U.S.-Software-Jobs/).
+[U.S. Software Jobs](https://apgupta3091.github.io/U.S.-Software-Jobs/).
 is a software development data visualization project,
 in which developers whom are currently looking for new software dev 
 roles can acsess to see which states have the most open roles. 
