@@ -70,6 +70,20 @@ function and passed in the features of the data which was each state and it's (l
 From here I was able to append the path and add attributes which allowed me to create 
 borders where each states border is.
 
+### Map Hover
+<img width="369" alt="Screen Shot 2021-12-09 at 11 01 26 AM" src="https://user-images.githubusercontent.com/53449807/145435970-3b2721aa-c362-4367-87d4-2ff5cd786bb1.png">
+
+When a user hovers over the map, the user is able to retrieve the data for the #
+of open software dev jobs in each state. The map also highlights the current state
+as well.
+
+![Screen Shot 2021-12-09 at 11 29 20 AM](https://user-images.githubusercontent.com/53449807/145436376-1e851087-0417-4f05-a644-27441c076013.png)
+
+The user is able to have acsess to the # of software dev jobs in each state
+through the use of the async await function above. This function asynchronusly
+sends a fetch request for each state to the usajobs api and saves that data
+into a js object ie. {'Alaska': 22}. This data is then passed to the map function
+which updates each states # of software dev jobs.
 
 -----------------------------------------------------------------------------
 
