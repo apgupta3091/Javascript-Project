@@ -80,8 +80,8 @@ const renderMap = (data) => {
   }
 
   document.onmousemove = (event) => {
-        document.getElementById("tooltip").style.left = event.pageX + 10 + "px";
-        document.getElementById("tooltip").style.top = event.pageY - 35 + "px";
+        document.getElementById("tooltip").style.left = event.pageX + 30 + "px";
+        document.getElementById("tooltip").style.top = event.pageY - 150 + "px";
   }
 
     

@@ -15,6 +15,7 @@ h1 {
 
 .map {
   position: relative;
+  margin-right: 10px;
 }
 
 .state:hover {
@@ -48,8 +49,8 @@ h1 {
 
 .legend-div {
   display: inline-block;
-  margin-left: 40px;
-  margin-top: -45px;
+  margin-left: 175px;
+  margin-top: -40px;
   display: flex;
   align-items: center;
 }
