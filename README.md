@@ -23,7 +23,7 @@ roles have acsess to see which states have the most open roles.
 -----------------------------------------------------------------------------
 ## FEATURES
 
-### Modal
+### Modal/Overlay
 <img width="503" alt="Screen Shot 2021-12-09 at 11 00 40 AM" src="https://user-images.githubusercontent.com/53449807/145431863-e511762d-5e1c-485b-9ac2-d578fade078f.png">
 
 One of the features of the U.S. Software Jobs project is the modal. This Modal
@@ -43,6 +43,25 @@ well as an opacity of 1. This overlay was created by wrapping all of my html
 with a div tag so it covered the whole page. To close the modal and overlay
 a user can click on the body of the page and the ease-in-out transition will
 take place and close the overlay and the modal.
+
+### Map
+<img width="711" alt="Screen Shot 2021-12-09 at 11 01 10 AM" src="https://user-images.githubusercontent.com/53449807/145433460-cf8bef81-4df7-4fb5-a76e-e92f2f4f9992.png">
+
+Another feature of this project is the map. The map was created using D3
+and allows a user to hover over it as it highlights each state when that 
+state is hovered over.
+
+![Screen Shot 2021-12-09 at 11 16 06 AM](https://user-images.githubusercontent.com/53449807/145433964-9c35b3b2-3de4-47a9-9c53-4aa6a19ea64b.png)
+
+The map is implemented using d3.js. First, I set a width and height for the map.
+Second, I utilize the d3.select function to select the DOM element with the class
+of .map. Once selcted, I append an svg to that element with the width and height
+specified previously. Next, I utilized the d3.geoAlbersUsa() function from the d3.js
+library which gave me the ability to place a blank map of the U.S. on my DOM. Lastly,
+I utilized the .json file I found on github to be able to grab the coordinates of 
+each state which is necessary for the next step.
+
+
 
 
 -----------------------------------------------------------------------------
