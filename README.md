@@ -85,6 +85,15 @@ sends a fetch request for each state to the usajobs api and saves that data
 into a js object ie. {'Alaska': 22}. This data is then passed to the map function
 which updates each states # of software dev jobs.
 
+### Region Chart
+<img width="577" alt="Screen Shot 2021-12-09 at 11 02 12 AM" src="https://user-images.githubusercontent.com/53449807/145441237-9e66bd7e-a2ef-40fe-93f5-5982f559a26a.png">
+
+Laslty, I included a chart with the 4 regions of the U.S. in the drop down selection.
+When any of these options are selected, the chart dynamically renders the data for 
+the region selected.
+
+
+
 -----------------------------------------------------------------------------
 
 ## FUTURE FEATURES:
