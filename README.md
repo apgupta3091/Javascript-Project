@@ -61,7 +61,14 @@ library which gave me the ability to place a blank map of the U.S. on my DOM. La
 I utilized the .json file I found on github to be able to grab the coordinates of 
 each state which is necessary for the next step.
 
+![Screen Shot 2021-12-09 at 11 21 48 AM](https://user-images.githubusercontent.com/53449807/145435035-86a31a93-fc79-4396-a43d-121d3479319b.png)
 
+The next step in creating the map was getting all of the borders for each state of 
+the map. The first step was done by passing in the previous json data for the coordinates of 
+each state and selecting all the "path" elements in that data. Next, I utilized the d3 .data
+function and passed in the features of the data which was each state and it's (lat, long).
+From here I was able to append the path and add attributes which allowed me to create 
+borders where each states border is.
 
 
 -----------------------------------------------------------------------------
