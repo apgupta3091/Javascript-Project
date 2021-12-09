@@ -13,6 +13,7 @@ import barChart from './scripts/chart';
 document.addEventListener("DOMContentLoaded", () => {
     renderMap(setData);
     legend();
+
     const body = document.querySelector('body');
     const closeModalButton = document.getElementById('close-btn');
     const overlay = document.getElementById('overlay');
@@ -44,15 +45,13 @@ document.addEventListener("DOMContentLoaded", () => {
         for(let i = 0; i < states.length; i++){
             data[states[i]] = data[states[i]].SearchResult.SearchResultCountAll;
         }
-        console.log(data);
         clearMap();
         renderMap(data);
       })
       .catch(error => {
-        console.log('There is a problem with your fetch operation', error);
+        return error;
       });
 
-    const form = document.querySelector('.form');
     const regionText = document.getElementById('region-text');
     const select = document.getElementById('region');
     

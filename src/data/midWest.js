@@ -1,11 +1,4 @@
 let midWest = [
-   
-    
- 
-    
-   
-   
-    
     {
         "name": "IL",
         "value": 181 
@@ -22,10 +15,6 @@ let midWest = [
         "name": "KA",
         "value": 42 
     },
-   
-    
-    
-    
     {
         "name": "MI",
         "value": 76 
@@ -34,16 +23,10 @@ let midWest = [
         "name": "MN",
         "value": 156 
     },
-    
-    
-    
     {
         "name": "NE",
         "value": 71 
     },
-    
-   
-  
     {
         "name": "ND",
         "value": 43 
@@ -56,23 +39,14 @@ let midWest = [
         "name": "OK",
         "value": 171 
     },
-    
-    
-    
     {
         "name": "SD",
         "value": 50 
     },
-    
-    
-    
-   
-     {
+    {
         "name": "WI",
         "value": 55 
     },
-    
-
 ];
 
 export default midWest;

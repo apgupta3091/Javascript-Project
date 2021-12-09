@@ -58,8 +58,6 @@ let northEast = [
         "name": "WV",
         "value": 27 
     },
-   
-
 ];
 
 export default northEast;
