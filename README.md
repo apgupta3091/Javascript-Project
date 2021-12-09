@@ -92,7 +92,14 @@ Laslty, I included a chart with the 4 regions of the U.S. in the drop down selec
 When any of these options are selected, the chart dynamically renders the data for 
 the region selected.
 
+![Screen Shot 2021-12-09 at 12 14 28 PM](https://user-images.githubusercontent.com/53449807/145443982-41254e72-bbe1-43fc-9765-8b77d301a4f4.png)
 
+The chart is created using a similar method to the map. It selects a DOM
+element in the html and appends a svg element to that element. The data
+for the chart is sorted by the function above. This function takes in the 
+data which looks like this ( { "name": "AZ", "value" : 33} ) and sets a to 
+the name and b to the value and returns this object in ascending order based
+on each states value.
 
 -----------------------------------------------------------------------------
 
