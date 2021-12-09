@@ -16,6 +16,7 @@ const barChart = (data) => {
         height = 500 - margin.top - margin.bottom - 250 ;
 
     let svg = d3.select("#graphic").append("svg")
+        .attr('class', 'svg1')
         .attr("width", width + margin.left + margin.right + 10)
         .attr("height", height + margin.top + margin.bottom)
         .append("g")
@@ -60,6 +61,7 @@ const barChart = (data) => {
 
     bars.append("text")
         .attr("class", "label")
+        .style('font-size', '16px')
         .attr("y", function (d) {
             return y(d.name) + y.rangeBand() / 2 + 4;
         })

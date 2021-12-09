@@ -61,7 +61,7 @@ const legend = () =>{
                 return legendContainerAttributes.x + legendBoxAttributes.width * i + 40;
             })
             .attr('y', legendContainerAttributes.y + 50)
-            .style('font-size', 18)
+            .style('font-size', 14)
             .text((function(d, i){
                 if (i === 5){
                     return legendLabels[i] + '+';

@@ -4,7 +4,8 @@
 body {
   height: 100vh;
   width: 100vw;
-  font-family: "Helvetica", "Times New Roman", Times, serif;
+  font-family: "Volkhov", serif;
+  font-weight: 400;
 }
 
 h1 {
@@ -48,7 +49,7 @@ h1 {
 .legend-div {
   display: inline-block;
   margin-left: 40px;
-  margin-top: 15px;
+  margin-top: -45px;
   display: flex;
   align-items: center;
 }
@@ -165,5 +166,31 @@ h1 {
 #graphic {
   border: 1px solid black;
   margin-left: 100px;
-  margin-top: 275px;
+  margin-top: 50px;
+}
+
+.form {
+  margin-top: -30px;
+}
+
+.tick {
+  font-size: 12px;
+}
+
+.chart-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+.map-title {
+  margin-left: 220px;
+  font-weight: 400;
 }

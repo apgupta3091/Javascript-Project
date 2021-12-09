@@ -52,9 +52,36 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log('There is a problem with your fetch operation', error);
       });
 
-    barChart(west);
+    const form = document.querySelector('.form');
+    const regionText = document.getElementById('region-text');
+    const select = document.getElementById('region');
     
-    
+    barChart(northEast);
+
+      select.onchange = () => {
+      let value = select.value;
+      if (value === "northEast"){
+        regionText.textContent="NorthEast Region"
+        let svg = document.querySelector('.svg1');
+        svg.remove();
+        barChart(northEast);
+      } else if (value === "southEast"){
+        regionText.textContent= "SouthEast Region"
+        let svg = document.querySelector('.svg1');
+        svg.remove();
+        barChart(southEast);
+      } else if (value === "west"){
+        regionText.textContent= "West Region"
+        let svg = document.querySelector('.svg1');
+        svg.remove();
+        barChart(west);
+      } else {
+        regionText.textContent= "MidWest Region"
+        let svg = document.querySelector('.svg1');
+        svg.remove();
+        barChart(midWest);
+      }
+    }
     
 })
 
