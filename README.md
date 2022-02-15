@@ -9,6 +9,12 @@ roles have acsess to see which states have the most open roles.
 
 -----------------------------------------------------------------------------
 
+## ABOUT:
+-U.S. Software Jobs is a vanilla Javascript project created with the help of the D3.js library. This project allows users to hover over a map of the 50 states of the U.S. and it fetches real time data on how many open software engineering jobs there are in that state according to the USAJobs api. This project also includes charts from D3 which showcase the data in chart form for each region of the U.S. I created this project to help my fellow bootcamp students see where the job market is hot, and I hope you enjoy!
+
+-----------------------------------------------------------------------------
+
+
 ## TECHNOLOGIES, LIBRARIES, API'S:
 
 - HTML5
